@@ -1,0 +1,238 @@
+/* General Styles */
+body {
+
+    margin: 0;
+    font-family: 'Lalezar', Arial, sans-serif;;
+    color: #fff;
+    line-height: 1.6;
+    background-color: #0e0e0e;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+}
+
+.hero-text {
+    margin-top: 15%;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    font-family: 'Lalezar', sans-serif;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* Content Sections */
+.content-section {
+    padding: 3rem 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ff9800;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: #222;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #333;
+}
+
+.card h3 {
+    color: #ff9800;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #fff;
+    background: #ff9800;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.card a:hover {
+    background: #e68a00;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.moving-text {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    animation: moveText 10s linear infinite;
+}
+
+@keyframes moveText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .navbar a {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
+
+.lalezar-regular {
+    font-family: "Lalezar", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}   
+
+/* Reference Section */
+#ref {
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    color: #ff9800;
+}
+
+#ref i {
+    font-size: 2rem;
+    margin: 0 1rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+#ref i:hover {
+    transform: scale(1.2);
+    color: #e68a00;
+}
+
+#ref a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+#ref a:hover {
+    color: #ff9800;
+    text-decoration: underline;
+}
+.moving-text {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: transparent; /* Optional: Add a background color to make the text more visible */
+    padding: 10px; /* Optional: Add some padding */
+    text-align: center; /* Center the text */
+}
+
+.moving-text div {
+    display: inline-block;
+    animation: moveText 10s linear infinite;
+    margin-left: 20px; /* Space between static and moving text */
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.no{
+    background: rgba(0, 0, 0, 0.8);
+}
